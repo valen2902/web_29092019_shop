@@ -8,7 +8,7 @@
     ];
     include('parts/header.php');
 ?>
-<div>Корзина</div>
+
 <?php 
     $footer_config = [
         'page-js'=>'basket.js'
