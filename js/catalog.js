@@ -1,9 +1,3 @@
-/**
- * Будет 2 класса:
- * 1) Catalog - он будет заниматься задачами управления
- * 2) Product - он будет отрисовывать карточку товара в каталоге
- */
-
 class Catalog{
     constructor(){
         this.el = document.querySelector('.catalog');
@@ -12,15 +6,6 @@ class Catalog{
     }
     load(){
         this.showPreloader();
-        // загружает данные json по ajax из handlerCatalog.php
-        // после загрузки вызывает метод renderProducts
-
-        /**
-         * В методе load сходить по ajax за даннаыми handlerCatalog.php
-         * Перевести из формата JSON в обычный js
-         * Вывести их в консоль
-         */
-
         let xhr = new XMLHttpRequest();
         xhr.open('GET', '/handlers/handlerCatalog.php');
         xhr.send();
@@ -42,13 +27,11 @@ class Catalog{
     }
     renderProducts(){
         this.hidePreloader();
-        // отрисовывает карточки товара по данным
         let catalogProductsEl = this.el.querySelector('.catalog-products');
 
         this.products.forEach((productItem)=>{
             catalogProductsEl.appendChild( productItem.getElement() );
         });
-
     }
     showPreloader(){
         this.preloaderEl.classList.remove('hide');
@@ -72,10 +55,9 @@ class Product{
         productEl.classList.add('catalog-products-item');
         productEl.innerHTML = `
             <div class='catalog-products-item-img' style='background-image: url(${this.img})'></div>
-            <div class='catalog-products-item-name'>${this.name}</div> 
-            <div class='catalog-products-item-price'>${this.price} руб.</div>  
+            <div class='catalog-products-item-name'>${this.name}</div>
+            <div class='catalog-products-item-price'>${this.price} руб.</div>
         `;
-
         return productEl;
     }
 }

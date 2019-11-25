@@ -1,4 +1,3 @@
-<!-- Урок про JSON -->
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -8,7 +7,8 @@
     <title>JSON</title>
 </head>
 <body>
-    
+
     <script src="script.js"></script>
+    
 </body>
 </html>

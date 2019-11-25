@@ -1,7 +1,4 @@
 <?php 
-    /*
-        Файл - шаблон шапки
-     */
     include('parts/header_conf.php');
 ?>
 <!DOCTYPE html>
