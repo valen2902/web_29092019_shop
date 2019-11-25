@@ -1,7 +1,5 @@
 <?php 
-    /*
-        Файл - шаблон шапки
-     */
+
     include('parts/header_conf.php');
 ?>
 <!DOCTYPE html>
@@ -15,4 +13,7 @@
     <link rel="stylesheet" href="/styles/<?=$header_config['page-style']?>">
 </head>
 <body>
+    <div class="header">
+        <div class="header-images"></div>
+    </div>
     <div class="wrapper">
