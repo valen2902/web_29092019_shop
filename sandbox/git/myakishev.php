@@ -1,5 +1,5 @@
 <?php   
-    echo "Maxim Myakishev"
-    echo "Hello"
-    echo "Developers"
+    echo "Maxim Myakishev";
+    echo "Hello";
+    echo "Developers";
 ?>
