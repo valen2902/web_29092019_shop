@@ -4,7 +4,9 @@
 }
 
 .basket {
-  margin-top: 121 px;
+  margin-top: 150px;
+  position: relative;
+  min-height: 800px;
 }
 
 .basket-header {
@@ -146,7 +148,7 @@
 }
 
 .basket-content-right-size {
-  font-size: 13px;
+  font-size: 15px;
   color: #303030;
   text-transform: uppercase;
   text-align: center;
@@ -154,7 +156,7 @@
 }
 
 .basket-content-right-quantity {
-  font-size: 13px;
+  font-size: 15px;
   color: #303030;
   text-transform: uppercase;
   text-align: center;
@@ -162,7 +164,7 @@
 }
 
 .basket-content-right-price {
-  font-size: 13px;
+  font-size: 15px;
   color: #303030;
   text-align: left;
   margin-right: 50px;
@@ -170,8 +172,8 @@
 
 .basket-content-right-delete {
   position: absolute;
-  top: 470px;
-  right: 580px;
+  top: 250px;
+  right: 120px;
   width: 30px;
   height: 30px;
   cursor: pointer;
