@@ -41,6 +41,7 @@
             <div class="basket-content-right-delete"></div>
         </div>
     </div>
+    <div class="basket-button">Добавить в корзину</div>
 </div>
 
 <?php 
