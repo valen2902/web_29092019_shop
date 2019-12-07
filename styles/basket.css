@@ -28,7 +28,6 @@
   font-size: 36px;
   color: #303030;
   text-transform: uppercase;
-  line-height: 1;
   font-weight: 600;
 }
 
@@ -36,7 +35,7 @@
   font-size: 18px;
   color: #606060;
   font-style: italic;
-  margin-top: 14px;
+  margin-top: 15px;
 }
 
 .basket-box {
@@ -49,7 +48,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 96px;
+  margin-top: 100px;
   color: #a8a8a8;
 }
 
@@ -60,7 +59,7 @@
 }
 
 .basket-box-left h3 {
-  font-size: 12px;
+  font-size: 13px;
   color: #909090;
   text-transform: uppercase;
   text-align: center;
@@ -75,7 +74,7 @@
 }
 
 .basket-box-right h3 {
-  font-size: 12px;
+  font-size: 13px;
   color: #909090;
   text-transform: uppercase;
   text-align: center;
@@ -108,7 +107,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 18px;
+  margin-top: 20px;
 }
 
 .basket-content-left-id {
@@ -116,8 +115,8 @@
 }
 
 .basket-content-left-pic {
-  width: 98px;
-  height: 98px;
+  width: 100px;
+  height: 100px;
   border: 1px solid #e5e5e5;
   background-position: center center;
   background-size: contain;
@@ -125,11 +124,11 @@
 }
 
 .basket-content-left-text {
-  margin-left: 24px;
+  margin-left: 25px;
 }
 
 .basket-content-left-text p {
-  font-size: 14px;
+  font-size: 13px;
   color: #303030;
   text-transform: uppercase;
   text-align: left;
@@ -147,7 +146,7 @@
 }
 
 .basket-content-right-size {
-  font-size: 14px;
+  font-size: 13px;
   color: #303030;
   text-transform: uppercase;
   text-align: center;
@@ -155,7 +154,7 @@
 }
 
 .basket-content-right-quantity {
-  font-size: 14px;
+  font-size: 13px;
   color: #303030;
   text-transform: uppercase;
   text-align: center;
@@ -163,7 +162,7 @@
 }
 
 .basket-content-right-price {
-  font-size: 14px;
+  font-size: 13px;
   color: #303030;
   text-align: left;
   margin-right: 50px;
@@ -171,12 +170,12 @@
 
 .basket-content-right-delete {
   position: absolute;
-  top: 430px;
+  top: 470px;
   right: 580px;
   width: 30px;
   height: 30px;
   cursor: pointer;
-  color: #303030;
+  color: #909090;
 }
 
 .basket-content-right-delete::before {
@@ -184,7 +183,7 @@
   position: absolute;
   width: 2px;
   height: 30px;
-  background-color: #303030;
+  background-color: #909090;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   right: 0;
@@ -197,7 +196,7 @@
   position: absolute;
   width: 2px;
   height: 30px;
-  background-color: #303030;
+  background-color: #909090;
   -webkit-transform: rotate(-135deg);
           transform: rotate(-135deg);
   right: 0;
@@ -206,12 +205,14 @@
 }
 
 .basket-button {
+  font-size: 18px;
   width: 200px;
-  padding: 10px;
+  padding: 20px;
   text-align: center;
   background-color: #fe861d;
   color: #ffffff;
   margin: 20px auto;
   cursor: pointer;
+  margin-top: 150px;
 }
 /*# sourceMappingURL=basket.css.map */

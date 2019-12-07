@@ -12,6 +12,6 @@
         $response['products'][] = $row;    
     }
 
-    sleep(3);
+    sleep(1);
     echo json_encode($response);
 ?>

@@ -18,7 +18,6 @@
             font-size: 36px;
             color: rgb(48, 48, 48);
             text-transform: uppercase;
-            line-height: 1;
             font-weight: 600;
         }
 
@@ -26,7 +25,7 @@
             font-size: 18px;
             color: #606060;
             font-style: italic;
-            margin-top: 14px;
+            margin-top: 15px;
         }
     }
 
@@ -34,14 +33,14 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-top: 96px;
+        margin-top: 100px;
         color: #a8a8a8;
         
         &-left {
             display: flex;
 
             h3 {
-                font-size: 12px;
+                font-size: 13px;
                 color: rgb( 144, 144, 144);
                 text-transform: uppercase;
                 text-align: center;
@@ -54,7 +53,7 @@
             display: flex;
             
             h3 { 
-                font-size: 12px;
+                font-size: 13px;
                 color: rgb(144, 144, 144);
                 text-transform: uppercase;
                 text-align: center;
@@ -78,15 +77,15 @@
         &-left {
             display: flex;
             align-items: center;
-            margin-top: 18px;
+            margin-top: 20px;
            
             &-id {
                 display: none;
             }
 
             &-pic {
-                width: 98px;
-                height: 98px;
+                width: 100px;
+                height: 100px;
                 border: 1px solid #e5e5e5;
                 background-position: center center;
                 background-size: contain;
@@ -94,9 +93,9 @@
             }
 
             &-text {
-                margin-left: 24px;
+                margin-left: 25px;
                 p {
-                    font-size: 14px;
+                    font-size: 13px;
                     color: rgb(48, 48, 48);
                     text-transform: uppercase;
                     text-align: left;
@@ -111,7 +110,7 @@
             margin-right: 250px;
 
             &-size {
-                font-size: 14px;
+                font-size: 13px;
                 color: rgb(48, 48, 48);
                 text-transform: uppercase;
                 text-align: center;
@@ -119,7 +118,7 @@
             }
 
             &-quantity {
-                font-size: 14px;
+                font-size: 13px;
                 color: rgb(48, 48, 48);
                 text-transform: uppercase;
                 text-align: center;
@@ -127,7 +126,7 @@
             }
 
             &-price {
-                font-size: 14px;
+                font-size: 13px;
                 color: rgb(48, 48, 48);
                 text-align: left;
                 margin-right: 50px;
@@ -135,19 +134,19 @@
 
             &-delete {
                 position: absolute;
-                top: 430px;
+                top: 470px;
                 right: 580px;
                 width: 30px;
                 height: 30px;
                 cursor: pointer;
-                color: rgb(48, 48, 48);
+                color: rgb( 144, 144, 144);
 
                 &::before {
                     content: '';
                     position: absolute;
                     width: 2px;
                     height: 30px;
-                    background-color: rgb(48, 48, 48);
+                    background-color: rgb( 144, 144, 144);
                     transform: rotate(-45deg);
                     right: 0;
                     left: 0;
@@ -158,7 +157,7 @@
                     position: absolute;
                     width: 2px;
                     height: 30px;
-                    background-color: rgb(48, 48, 48);
+                    background-color: rgb( 144, 144, 144);
                     transform: rotate(-135deg);
                     right: 0;
                     left: 0;
@@ -167,13 +166,17 @@
             }
         }
     }
+
     &-button {
+        font-size: 18px;
         width: 200px;
-        padding: 10px;
+        padding: 20px;
         text-align: center;
         background-color: rgb(254, 134, 29);
         color: #ffffff;
         margin: 20px auto;
         cursor: pointer;
+        margin-top: 150px;
     }
+    
 }
