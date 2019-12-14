@@ -27,7 +27,7 @@
     <h1 class="product-h1"><?=$template['name']?></h1>
     <div class="product-price"><?=$template['price']?></div>
     <div class="product-description"><?=$template['description']?></div>
-    <button class="product-add-to-card">Добавить в корзину</button>
+    <button class="product-add-to-card" data-product-id="<?=$template['id']?>">Добавить в корзину</button>
 </div>
 
  <?php 

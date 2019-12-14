@@ -5,6 +5,8 @@ $header_config = [
 ];
 include('parts/header.php');
    
+
+d($_SESSION);
 ?>
 <div>Корзина</div>
  <?php 
