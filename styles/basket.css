@@ -123,10 +123,11 @@
   background-position: center center;
   background-size: contain;
   background-repeat: no-repeat;
+  background-image: url("/images/2.jpg");
 }
 
 .basket-content-left-text {
-  margin-left: 25px;
+  margin-left: 60px;
 }
 
 .basket-content-left-text p {
@@ -152,7 +153,7 @@
   color: #303030;
   text-transform: uppercase;
   text-align: center;
-  margin-right: 50px;
+  margin-right: 48px;
 }
 
 .basket-content-right-quantity {
@@ -160,20 +161,54 @@
   color: #303030;
   text-transform: uppercase;
   text-align: center;
-  margin-right: 50px;
+  margin-right: 80px;
+}
+
+.basket-content-right-quantity .qty {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  margin-left: 100px;
+  margin-right: 35px;
+}
+
+.basket-content-right-quantity .plus {
+  background-color: black;
+  color: white;
+  width: 13px;
+  height: 15px;
+  margin: auto;
+  position: relative;
+  top: -10px;
+  left: -30px;
+  border: none;
+  cursor: pointer;
+}
+
+.basket-content-right-quantity .minus {
+  background-color: black;
+  color: white;
+  width: 13px;
+  height: 15px;
+  margin: auto;
+  position: relative;
+  top: 10px;
+  left: -47px;
+  border: none;
+  cursor: pointer;
 }
 
 .basket-content-right-price {
   font-size: 15px;
   color: #303030;
   text-align: left;
-  margin-right: 50px;
+  margin-right: 20px;
 }
 
 .basket-content-right-delete {
   position: absolute;
-  top: 250px;
-  right: 120px;
+  top: 240px;
+  right: 118px;
   width: 30px;
   height: 30px;
   cursor: pointer;
@@ -207,7 +242,7 @@
 }
 
 .basket-button {
-  font-size: 18px;
+  font-size: 20px;
   width: 200px;
   padding: 20px;
   text-align: center;
