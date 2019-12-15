@@ -1,6 +1,3 @@
-alert('Hello');
-let basketEl = $('.basket-content');
-$('basket-content-right-delete').click(function(e){
-    e.preventDefault(); 
-    basketEl.css('display', 'flex').hide().fadeIn(500);
+$('.basket-content-right-delete').click(function() {
+    $('.basket-content').css('display', 'none').show().fadeOut(500);
 });

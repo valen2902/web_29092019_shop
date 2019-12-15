@@ -28,6 +28,7 @@
             color: #606060;
             font-style: italic;
             margin-top: 15px;
+            text-align: center;
         }
     }
 
@@ -66,7 +67,7 @@
     }
 
     &-line{
-        width: 100%;
+        width: 1100px;
         height: 1px;
         background: #e5e5e5;
     }
@@ -80,10 +81,6 @@
             display: flex;
             align-items: center;
             margin-top: 20px;
-           
-            &-id {
-                display: none;
-            }
 
             &-pic {
                 width: 100px;
@@ -117,7 +114,7 @@
                 color: rgb(48, 48, 48);
                 text-transform: uppercase;
                 text-align: center;
-                margin-right: 48px;
+                margin-right: 120px;
             }
 
             &-quantity {
@@ -125,7 +122,7 @@
                 color: rgb(48, 48, 48);
                 text-transform: uppercase;
                 text-align: center;
-                margin-right: 80px;
+                margin-right: 150px;
 
                     .qty {
                         width: 30px;
@@ -143,7 +140,7 @@
                         margin: auto;
                         position: relative;
                         top: -10px;
-                        left: -30px;
+                        left: 0px;
                         border: none;
                         cursor: pointer;
                     }
@@ -156,9 +153,16 @@
                         margin: auto;
                         position: relative;
                         top: 10px;
-                        left: -47px;
+                        left: 48px;
                         border: none;
                         cursor: pointer;
+                    }
+
+                    input {
+                        width: 30px;
+                        height: 30px;
+                        font-size: 15px;
+                        text-align: center;
                     }
 
             }
@@ -217,4 +221,63 @@
         margin-top: 150px;
     }
     
+}
+
+@media (min-width: 300px) and (max-width: 1800px) {
+    .basket-content,
+    .basket-line,
+    .basket-box {
+        margin-left: 10px;
+    } 
+    
+    .basket-content-right-delete {
+        top: 240px;
+        left: 910px;
+    }
+
+    .basket-content-right-price {
+        margin-left: 40px;
+        width: 100px;
+    }
+
+    .basket-content-right-size {
+        margin-right: 140px;
+    }
+
+    .basket-content-left-text {
+        margin-left: 70px;
+    }
+
+    .basket-content-left {
+        margin-right: 150px;
+    }
+
+    .basket-content-right-quantity {
+        width: 0px;
+
+            .plus {
+                background-color: black;
+                color: white;
+                width: 13px;
+                height: 15px;
+                margin: auto;
+                position: relative;
+                top: -10px;
+                left: 45px;
+                border: none;
+                cursor: pointer;
+            }
+        }
+}
+
+@media (min-width: 1063px) and (max-width: 1900px) {
+
+    .basket-content-left {
+        margin-right: 280px;
+    }
+
+    .basket-content-right-delete {
+        left: 1050px;
+    }
+
 }

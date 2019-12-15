@@ -25,7 +25,7 @@
         </div>
     </div>
     <div class="basket-line"></div>
-    <?php ?>
+
     <div class="basket-content">
         <div class="basket-content-left">
             <div class="basket-content-left-pic"></div>
@@ -36,11 +36,9 @@
         <div class="basket-content-right">
             <div class="basket-content-right-size">M</div>
             <div class="basket-content-right-quantity">
-                <div class="number">
                     <span class="minus">-</span>
                     <input type="text" value="1" size="5"/>
                     <span class="plus">+</span>
-                </div>
             </div>
             <div class="basket-content-right-price"> 10000 руб.</div>
             <div class="basket-content-right-delete"></div>
