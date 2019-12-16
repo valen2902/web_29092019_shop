@@ -38,6 +38,6 @@
     // INSERT products (id, name, price, img, description) VALUE (NULL, 'Платье', 5000, '/images/catalog/dress.jpg' , 'Красивое красное платье');
     // INSERT products (id, name, price, img, description) VALUE (NULL, 'Рубашка', 8200, '/images/catalog/shirt.jpg' , 'Мужская голубая рубашка');
 
-    sleep(3);
+    sleep(1);
     echo json_encode($response);
 ?>
