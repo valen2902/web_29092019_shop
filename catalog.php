@@ -29,7 +29,7 @@ $data_test = [];
             while( $row = mysqli_fetch_assoc($result_test) ){
                 $data_test[] = $row;
             }
-            d($data_test);
+            // d($data_test);
 ?>
 <div class="catalog" data-catalog-id="<?=$template['catalog_id']?>">
     <div class="catalog-header">
