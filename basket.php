@@ -30,17 +30,17 @@
         <div class="basket-content-left">
             <div class="basket-content-left-pic"></div>
             <div class="basket-content-left-text">
-                <p>Штаны</p>
+                <p></p>
             </div>
         </div>
         <div class="basket-content-right">
-            <div class="basket-content-right-size">M</div>
+            <div class="basket-content-right-size"></div>
             <div class="basket-content-right-quantity">
                     <span class="minus">-</span>
                     <input type="text" value="1" size="5"/>
                     <span class="plus">+</span>
             </div>
-            <div class="basket-content-right-price"> 10000 руб.</div>
+            <div class="basket-content-right-price"> руб.</div>
             <div class="basket-content-right-delete"></div>
         </div>
     </div>
