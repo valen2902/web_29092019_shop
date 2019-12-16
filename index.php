@@ -1,12 +1,10 @@
-<?php 
-    /*
-        Файл для главной страницы сайта
-    */
-    $header_config = [
-        'title'=> 'Главная страница',
-        'page-style'=>'main.css'
-    ];
-    include('parts/header.php');
+<?php
+$header_config = [
+    'title'=> 'Главная страница',
+    'page-style'=>'main.css'
+];
+include('parts/header.php');
+   
 ?>
 <div class="main">
     <h1>НОВЫЕ ПОСТУПЛЕНИЯ ВЕСНЫ</h1>

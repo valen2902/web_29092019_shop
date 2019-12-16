@@ -1,5 +1,4 @@
 <?php 
-
     include('parts/header_conf.php');
 ?>
 <!DOCTYPE html>
