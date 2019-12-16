@@ -1,9 +1,311 @@
 // Файл с базовыми стилиями проекта
+
+$mainText: 'Roboto', sans-serif;
+
+$mainColor: #7c7c7c;
+$lastColor: #303030;
+$secondsColor: #e5e5e5;
+
+@mixin a() {
+    position: relative;
+    text-decoration: none;
+    color: $lastColor;
+    font-size: 14px;
+    font-family: $mainText;
+}
+@mixin hoverBefore() {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    background-color: $lastColor;
+    top: 15px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+@mixin position() {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin footerA() {
+    position: relative;
+    text-decoration: none;
+    color: $mainColor;
+    font-size: 12px;
+    font-family: $mainText;
+}
+@mixin line($left) {
+    content: '';
+    position: absolute;
+    width: 160px;
+    height: 2px;
+    background-color: $secondsColor5e5;
+    left: 21%;
+    right: 0;
+    bottom: 42px;
+    transform: rotate(-90deg);
+    @if $left == 'left'{
+        left: 21%;
+    }@else if $left == 'left-1'{
+        left: 61%;
+    }
+}
+@mixin accountSiz() {
+    width: 21px;
+    height: 25px;
+}
+
 *{
     margin: 0;
     padding: 0;
 }
 .wrapper{
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 1181px;
+}
+.header{
+    @include position();
+    width: 100%;
+    margin-top: 38px;
+
+    .logoNav{
+        display: flex;
+        align-items: center;
+
+        &-logo{
+            width: 42px;
+            height: 42px;
+            background: url(/images/icons/logo.jpg) center center / cover no-repeat;
+        }
+        nav{
+            margin-left: 56px;
+            width: 400px;
+            display: flex;
+            justify-content: space-between;
+            
+            a{
+                @include a();
+
+                &::before{
+                    @include hoverBefore();
+                }
+                &:hover{
+                    &::before{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .account-basket{
+        display: flex;
+        
+        .account{
+            display: flex;
+            align-items: center;
+            
+            &-logo{
+                @include accountSize();
+                background: url(/images/icons/account.png) center center /cover no-repeat;
+            }
+            a{
+                @include a();
+                margin-left: 10px;
+
+                &::before{
+                    @include hoverBefore();
+                }
+                &:hover{
+                    &::before{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .basket{
+            display: flex;
+            align-items: center;
+            margin-left: 50px;
+            
+            &-logo{
+                @include accountSize();
+                background: url(/images/icons/bascet.png) center center /cover no-repeat;
+            }
+            a{  
+                @include a();
+                margin-left: 10px;
+
+                &::before{
+                    @include hoverBefore();
+                }
+                &:hover{
+                    &::before{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }    
+    &::before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: $secondsColor5e5;
+        top: 77px;
+        left: 0;
+        right: 0;
+    }
+}
+@media(max-width: 1199px){
+    .wrapper{
+        margin: 0 auto;
+        max-width: 98%;
+    }
+}
+@media(max-width: 799px){
+    .header{
+        align-items: flex-start;
+        
+        .logoNav{
+            align-items: flex-start;
+            
+            nav{
+                display: block;
+                width: 30%;
+                p{
+                    margin-bottom: 5px;
+                }
+            }
+        }
+        &::before{
+            top: 140px;
+        }
+    }
+}
+
+.footer{
+    @include position();
+    margin-top: 123px;
+    margin-bottom: 81px;
+
+    .collection{
+        h3{
+            margin-bottom: 8px;
+            font-size: 14px;
+            font-family: $mainText;
+        }
+        nav{
+            margin-top: 5px;
+            display: block;
+
+            p{
+                margin-top: 5px;
+            }
+
+            a{
+                @include footerA();
+                
+                &::before{
+                    @include hoverBefore();
+                }
+                &:hover{
+                    &::before{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    &::before{
+        @include line('left');
+    }
+    .score{
+        h3{
+            font-size: 14px;
+        }
+        nav{
+            margin-top: 5px;
+            display: block;
+
+            p{
+                margin-top: 5px;
+            }
+
+            a{
+                @include footerA();
+                
+                &::before{
+                    @include hoverBefore();
+                }
+                &:hover{
+                    &::before{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    &::after{
+        @include line('left-1');
+    }
+    .social{
+        h3{
+            margin-bottom: 8px;
+            font-size: 14px;
+            font-family: $mainText;
+        }
+        p{
+            margin-top: 5px;
+            color: $mainColor;
+            font-size: 12px;
+            font-family: $mainText;
+        }
+        &-buttons{
+            display: flex;
+            margin-top: 25px;
+            
+            &-item{
+                width: 32px;
+                height: 32px;
+                margin-right: 15px;
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: cover;
+
+                &.tw-pic{
+                    background-image: url(/images/icons/twitter.png);
+                }
+                &.fb-pic{
+                    background-image: url(/images/icons/facebook.png);
+                }
+                &.ins-pic{
+                    background-image: url(/images/icons/instagram.png);
+                }
+            }
+        }
+    }
+}
+@media(max-width: 799px){
+    .footer{
+        &::before{
+            left: 10%;
+        }
+        &::after{
+            left: 48%;
+        }
+    }
+}
+@media(max-width: 599px){
+    .footer{
+        &::before{
+            left: 7%;
+        }
+        &::after{
+            left: 37%;
+        }
+    }
 }

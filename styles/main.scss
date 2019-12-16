@@ -1,1 +1,424 @@
 // Стили главной страницы
+
+.main{
+    h1{
+        margin-top: 171px;
+        text-align: center;
+        font-size: 72px;
+        font-weight: 200;
+    }
+    h3{
+        text-align: center;
+        margin-top: 13px;
+        font-size: 24px;
+        font-weight: 200;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-style: italic;
+        color: $secondsColor;
+    }
+    p{
+        margin-top: 92px;
+        text-align: center;
+
+        a{
+            padding: 25px 40px 25px 40px;
+            border: 2px solid $secondsColor;
+            color: $secondsColor;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        
+    }
+}
+
+// Стили главная страница Проекта №3.
+
+$mainColor: #ffffff;
+$lastColor: #bbbbbb;
+$secondsColor: #606060;
+
+$mainText: 'Roboto', sans-serif;
+$lastText: 'Roboto Condensed', sans-serif;
+$italicText: 'Gupter', serif;
+
+@mixin circle() {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border: 2px solid $mainColor;
+    border-radius: 50px;
+    margin: 0 auto;
+}
+@mixin circleLinePosition($left) {
+    content: '';
+    position: absolute;
+    width: 23px;
+    height: 2px;
+    background-color: $mainColor;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto auto;
+    @if $left == 'left'{
+        left: 55px;
+    }@else if $left == 'right'{
+        left: -89px;
+    }
+}
+@mixin size() {
+    width: 295px;
+    height: 295px;
+}
+@mixin bigSize() {
+    width: 295px;
+    height: 590px;
+}
+@mixin line() {
+    position: relative;
+    width: 1px;
+    height: 16px;
+    border: 2px solid $mainColor;
+    border-radius: 5px;
+    background-color: $mainColor;
+    margin: 5px auto;
+}
+@mixin lineBefore() {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    border: 2px solid $mainColor;
+    background-color: $mainColor;
+    border-radius: 5px;
+    top: 22px;
+    bottom: 0;
+    right: 0;
+    left: -2.5px;
+}
+@mixin arrow() {
+    position: relative;
+    width: 30px;
+    height: 2px;
+    background-color: $mainColor;
+    margin: 0 auto;
+}
+@mixin arrowBefore() {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: 2px solid $mainColor;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transform: rotate(45deg);
+    border-right: none;
+    border-top: none;
+    margin: auto 0;
+}
+@mixin paragraf() {
+    padding: 0 60px 0 60px;
+    color: $mainColor;
+    font-size: 14px;
+    font-style: italic;
+    text-align: center;
+    font-family: $italicText;
+}
+@mixin paragraf-1() {
+    padding-top: 10px;
+    font-size: 18px;
+    font-style: italic;
+    font-family: $italicText;
+}
+@mixin paragraf-3() {
+    font-family: $lastText;
+    margin-top: 23px;
+    color: $mainColor;
+    font-size: 24px;                        
+}
+@mixin text() {
+    font-family: $lastText;
+    padding-top: 273px;
+    font-size: 24px;
+}
+@mixin text-1() {
+    font-family: $lastText;
+    position: relative;
+    padding-top: 127px;
+    font-size: 24px;
+}
+
+.main{
+    h1{
+        margin-top: 171px;
+        text-align: center;
+        font-size: 72px;
+        font-weight: 200;
+        font-family: $mainText;
+    }
+    h3{
+        font-family: $italicText;
+        text-align: center;
+        margin-top: 13px;
+        font-size: 24px;
+        font-weight: 200;
+        font-style: italic;
+        color: $secondsColor;
+    }
+    p{
+        margin-top: 92px;
+        text-align: center;
+
+        a{
+            padding: 25px 40px 25px 40px;
+            border: 2px solid $secondsColor;
+            color: $secondsColor;
+            text-decoration: none;
+            font-size: 14px;
+            font-family: $mainText;
+
+            &:hover{
+                background-color: $lastColor;
+            }
+        }
+    }
+    .photo{
+        margin-top: 77px;
+        display: flex;
+        flex-wrap: wrap;
+
+        a{
+            text-decoration: none;
+        }
+
+        &-block-first{
+            display: block;
+
+            &-1{
+                @include bigSize();
+                background: url(/images/1.jpg) center center / cover no-repeat;                
+
+                &-text{
+                    @include text();
+
+                    p{
+                        margin-top: 0;
+                        color: $mainColor;
+                    }
+                    &-paragraf{
+                        @include paragraf-1();
+                    }
+                }
+            }
+            &-5{
+                @include size();
+                background: url(/images/5.jpg) center center / cover no-repeat;
+            }
+        }
+        &-block-seconds{
+            display: block;
+
+            &-0{
+                @include size();
+                background-color: $lastColor;
+
+                &-text{
+                    padding-top: 70px;
+
+                    &-circle{
+                        @include circle();
+
+                        &-line{
+                            @include line();
+
+                            &::before{
+                                @include lineBefore();
+                            }
+                        }
+                        &::before{
+                            @include circleLinePosition('left');
+                        }
+                        &::after{
+                            @include circleLinePosition('right');
+                        }
+                    }
+                    &-paragraf{
+                        @include paragraf();
+                        margin-top: 25px;
+                    }
+                }
+            }
+            &-2{
+                @include size();
+                background: url(/images/2.jpg) center center / cover no-repeat;
+
+                &-text{
+                    @include text-1();
+
+                    p{
+                        margin-top: 0;
+                        color: $mainColor;
+                    }
+                    &-paragraf{
+                        @include paragraf-1();
+                    }
+                }    
+            }
+            &-8{
+                @include size();
+                background-color: $secondsColor;
+
+                &-text{
+                    padding-top: 108px;
+                        
+                    &-arrow{
+                        @include arrow();
+                        
+                        &::before{
+                            @include arrowBefore();
+                        }
+                    }
+                    &-paragraf{
+                      @include paragraf-3();                    
+                    }
+                }
+            }
+        }
+        &-block-third{
+            display: block;
+
+            &-3{
+                @include size();
+                background: url(/images/3.jpg) center center / cover no-repeat;
+            }
+            &-7{
+                @include size();
+                background-color: $lastColor;
+
+                &-text{
+                    padding-top: 70px;
+
+                    &-circle{
+                        @include circle();
+
+                        &-line{
+                            @include line();
+
+                            &::before{
+                                @include lineBefore();
+                            }
+                        }
+                        &::before{
+                            @include circleLinePosition('left');
+                        }
+                        &::after{
+                            @include circleLinePosition('right');
+                        }
+                    }
+                    &-paragraf{
+                        @include paragraf();
+                        margin-top: 25px;
+                    }
+                    &-paragraf-1{
+                        @include paragraf();
+                        margin-top: 5px;
+                    }
+                }
+            }
+            &-6{
+                position: relative;
+                @include size();
+                background: url(/images/6.jpg) center center / cover no-repeat;
+
+                &::before{
+                    content: '';
+                    position: absolute;
+                    background-color: #502331;
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                    bottom: 0;
+                    opacity: 0.5;
+                }
+                &-text{
+                    @include text-1();
+
+                    p{
+                        margin-top: 0;
+                        color: $mainColor;
+                    }
+                    &-paragraf{
+                        @include paragraf-1();
+                    }
+                }
+            }
+        }
+        &-block-fourth{
+            display: block;
+
+            &-8{
+                @include size();
+                background-color: $secondsColor;
+
+                &-text{
+                    padding-top: 108px;
+                        
+                    &-arrow{
+                        @include arrow();
+                        
+                        &::before{
+                            @include arrowBefore();
+                        }
+                    }
+                    &-paragraf{
+                       @include paragraf-3();
+                    }
+                    &-paragraf-1{
+                        font-family: $lastText;
+                        margin-top: 0;
+                        color: $mainColor;
+                        font-size: 24px;
+                    }
+                    &-paragraf-2{
+                        font-family: $italicText;
+                        margin-top: 10px;
+                        color: $mainColor;
+                        font-size: 18px;
+                        font-style: italic;   
+                    }
+                }
+            }
+            &-4{
+                @include bigSize();
+                background: url(/images/4.jpg) center center / cover no-repeat;
+
+                &-text{
+                    @include text();
+
+                    p{
+                        margin-top: 0;
+                        color: $mainColor;
+                    }
+                    &-paragraf{
+                        @include paragraf-1();
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width: 1199px){
+    .photo{
+        width: 70%;
+        margin: 0 auto;
+        justify-content: center;
+    }
+}
+@media(max-width: 999px){
+    .main{
+        h1{
+            font-size: 60px;
+        }
+    }
+}
